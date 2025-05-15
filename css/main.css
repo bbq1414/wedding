@@ -72,10 +72,16 @@ img {
     font-size: 18px;
 }
 
-.poem p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #666;
+.poem div {
+    position: relative;
+    margin-bottom: 1.875rem;
+    padding-bottom: 2.5rem;
+    font-size: 0.813rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: #111;
+    text-align: center;
+    white-space: pre-wrap;
 }
 
 /* Contact Section */
@@ -131,6 +137,7 @@ img {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    text-decoration: none;
     flex-shrink: 0;
 }
 
