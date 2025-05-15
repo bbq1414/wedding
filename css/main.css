@@ -80,7 +80,10 @@ img {
 
 /* Contact Section */
 .contact {
-    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
 .parents {
@@ -101,32 +104,32 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #fafafa;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
 
 .label {
-    font-size: 1.357rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: #111;
-    margin-left: 5.357rem;
 }
 
 .buttons {
     display: flex;
-    gap: 10px;
-    margin-right: 5.357rem;
+    gap: 1rem;
 }
 
 .btn-circle {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .btn-circle.small {
@@ -510,5 +513,14 @@ img {
     
     .btn-account {
         width: 100%;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .buttons {
+        justify-content: flex-start;
     }
 }
