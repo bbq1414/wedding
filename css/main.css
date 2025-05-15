@@ -35,7 +35,10 @@ img {
 }
 
 .main-image {
-    margin: 20px 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: none;
 }
 
 .main-image img {
