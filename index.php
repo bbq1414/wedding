@@ -102,7 +102,7 @@ $config = [
             
             <div class="contact-buttons">
                 <div class="contact-row">
-                    <span class="label">신랑측에게 연락하기</span>
+                    <span class="label">신랑에게 연락하기</span>
                     <div class="buttons">
                         <a href="tel:<?php echo $config['groom']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-phone"></i>
@@ -114,7 +114,7 @@ $config = [
                 </div>
                 
                 <div class="contact-row">
-                    <span class="label">신부측에게 연락하기</span>
+                    <span class="label">신부에게 연락하기</span>
                     <div class="buttons">
                         <a href="tel:<?php echo $config['bride']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-phone"></i>

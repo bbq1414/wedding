@@ -107,13 +107,15 @@ img {
 }
 
 .label {
-    font-size: 14px;
-    color: #666;
+    font-size: 1.357rem;
+    color: #111;
+    margin-left: 5.357rem;
 }
 
 .buttons {
     display: flex;
     gap: 10px;
+    margin-right: 5.357rem;
 }
 
 .btn-circle {
@@ -148,7 +150,8 @@ img {
     flex-wrap: wrap;
 }
 .family-row {
-    width: 48%;
+    padding: 0 0.625rem;
+    margin-top: 0.938rem;
 }
 .side {
     display: block;
