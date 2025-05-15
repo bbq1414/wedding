@@ -235,6 +235,7 @@ $config = [
         </div>
     </div>
     
+    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7s46ead8h2"></script>
     <script>
         const config = <?= json_encode($config, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>;
 
@@ -455,6 +456,19 @@ $config = [
                 return months[monthIndex];
             }
         });
+    </script>
+
+    <!-- Naver Map -->
+    <script>
+      var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(37.6894, 127.0464), // 예시 좌표
+        zoom: 16
+      });
+
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.6894, 127.0464),
+        map: map
+      });
     </script>
 </body>
 </html>
