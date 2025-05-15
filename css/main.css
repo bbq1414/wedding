@@ -73,7 +73,7 @@ img {
 }
 
 .poem p {
-    font-size: 14px;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #666;
 }
@@ -523,5 +523,9 @@ img {
     }
     .buttons {
         justify-content: flex-start;
+    }
+
+    .poem p {
+        font-size: 1.0rem;
     }
 }
