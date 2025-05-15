@@ -30,18 +30,15 @@ $config = [
     ],
     'gallery' => [
         'images' => [
-            'images/gallery1.jpg',
-            'images/gallery2.jpg',
-            'images/gallery3.jpg',
-            'images/gallery4.jpg',
-            'images/gallery5.jpg',
-            'images/gallery6.jpg',
-            'images/gallery7.jpg',
-            'images/gallery8.jpg',
-            'images/gallery9.jpg',
-            'images/gallery10.jpg',
-            'images/gallery11.jpg',
-            'images/gallery12.jpg',
+            './images/1.webp',
+            './images/2.webp',
+            './images/3.webp',
+            './images/4.webp',
+            './images/5.webp',
+            './images/6.webp',
+            './images/7.webp',
+            './images/8.webp',
+            './images/9.webp',
         ]
     ],
     'poem' => '사랑은 기다림의 미학이며<br>
@@ -72,7 +69,7 @@ $config = [
         <!-- Header Section -->
         <header class="header">
             <div class="main-image">
-                <img src="images/main.jpg" alt="Wedding Photo">
+                <img src="./images/main.webp" alt="Wedding Photo">
             </div>
             
             <div class="wedding-title">
