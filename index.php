@@ -286,14 +286,18 @@ $config = [
                     galleryModal.style.display = 'block';
                 });
             });
-            
-            // Close Modal when clicking outside
-            window.addEventListener('click', function(event) {
-                if (event.target == accountModal) {
-                    accountModal.style.display = 'none';
-                }
-                if (event.target == galleryModal) {
+
+            // 모달 바깥 클릭 시 닫기
+            galleryModal.addEventListener('click', function(event) {
+                if (!event.target.closest('.gallery-modal-content')) {
                     galleryModal.style.display = 'none';
+                }
+            });
+
+            // 계좌 모달도 동일하게 적용
+            accountModal.addEventListener('click', function(event) {
+                if (!event.target.closest('.modal-content')) {
+                    accountModal.style.display = 'none';
                 }
             });
             
