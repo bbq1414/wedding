@@ -462,7 +462,7 @@ $config = [
     <script>
       // 중심 좌표 설정
       var mapOptions = {
-        center: new naver.maps.LatLng(14142554.5291175, 4535392.8612611),
+        center: new naver.maps.LatLng(37.6880998, 127.0465185),
         zoom: 16
       };
 
@@ -470,7 +470,7 @@ $config = [
 
       // 마커 추가
       var marker = new naver.maps.Marker({
-        position: new naver.maps.LatLng(14142554.5291175, 4535392.8612611),
+        position: new naver.maps.LatLng(37.6880998, 127.0465185),
         map: map,
         title: '예식장 위치'
       });
