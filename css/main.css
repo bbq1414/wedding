@@ -539,4 +539,16 @@ img {
     .poem p {
         font-size: 1.0rem;
     }
+
+    .poem p::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-left: -1.875rem;
+        width: 3.750rem;
+        height: 1px;
+        background: #fbdde2;
+    }
 }
