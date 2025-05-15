@@ -63,6 +63,7 @@ $config = [
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type = "text/css" href="./css/main.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=7s46ead8h2"></script>
 </head>
 <body>
     <div class="container">
@@ -234,8 +235,7 @@ $config = [
             <img id="galleryModalImage" src="/placeholder.svg" alt="Gallery Image">
         </div>
     </div>
-    
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7s46ead8h2"></script>
+
     <script>
         const config = <?= json_encode($config, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>;
 
