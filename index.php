@@ -3,8 +3,8 @@ $config = [
     'groom' => [
         'name' => '강태일',
         'phone' => '010-3652-5609',
-        'father' => ['name' => '강공현', 'phone' => '010-2499-5609'],
-        'mother' => ['name' => '김진주', 'phone' => '010-2267-5609'],
+        'father' => ['name' => '강공현', 'phone' => '010-2499-5609', 'bank' => '우리은행', 'number' => '1002-809-433276'],
+        'mother' => ['name' => '김진주', 'phone' => '010-2267-5609', 'bank' => '제일은행', 'number' => '160-20-120948'],
         'accounts' => [
             ['bank' => '우리은행', 'number' => '1002-809-433276', 'holder' => '강공현'],
             ['bank' => '제일은행', 'number' => '160-20-120948', 'holder' => '김진주']
@@ -13,8 +13,8 @@ $config = [
     'bride' => [
         'name' => '오다솔',
         'phone' => '010-9948-6265',
-        'father' => ['name' => '오학만', 'phone' => '010-6822-7117'],
-        'mother' => ['name' => '이인자', 'phone' => '010-4713-6265'],
+        'father' => ['name' => '오학만', 'phone' => '010-6822-7117', 'bank' => '신한은행', 'number' => '110-002-690637'],
+        'mother' => ['name' => '이인자', 'phone' => '010-4713-6265', 'bank' => '광주은행', 'number' => '609-122-202811'],
         'accounts' => [
             ['bank' => '신한은행', 'number' => '110-002-690637', 'holder' => '오학만'],
             ['bank' => '광주은행', 'number' => '609-122-202811', 'holder' => '이인자']
@@ -67,12 +67,6 @@ $config = [
     <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <div class="names">
-                <h1><?php echo $config['groom']['name']; ?></h1>
-                <h1>&</h1>
-                <h1><?php echo $config['bride']['name']; ?></h1>
-            </div>
-            
             <div class="main-image">
                 <img src="images/main.jpg" alt="Wedding Photo">
             </div>
@@ -224,25 +218,6 @@ $config = [
             <div class="map" id="map">
                 <!-- Naver Map will be inserted here -->
             </div>
-            
-            <!-- <div class="transport-options">
-                <div class="transport-option">
-                    <i class="fas fa-subway"></i>
-                    <span>지하철</span>
-                </div>
-                <div class="transport-option">
-                    <i class="fas fa-bus"></i>
-                    <span>버스</span>
-                </div>
-                <div class="transport-option">
-                    <i class="fas fa-car"></i>
-                    <span>자가용</span>
-                </div>
-                <div class="transport-option">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>카카오맵</span>
-                </div>
-            </div> -->
         </section>
         
         <!-- Account Section -->
@@ -297,15 +272,15 @@ $config = [
             // Account Modal Events
             btnGroomAccount.addEventListener('click', function() {
                 showAccountModal('신랑측 계좌번호', [
-                    { bank: '신한은행', number: '110-123-456789', holder: '이대영' },
-                    { bank: '국민은행', number: '123-12-1234567', holder: '이지훈' }
+                    { bank: config.groom.father.bank, number: config.groom.father.number, holder: config.groom.father.name },
+                    { bank: config.groom.mother.bank, number: config.groom.mother.number, holder: config.groom.mother.name }
                 ]);
             });
             
             btnBrideAccount.addEventListener('click', function() {
                 showAccountModal('신부측 계좌번호', [
-                    { bank: '우리은행', number: '1002-123-456789', holder: '유창환' },
-                    { bank: '하나은행', number: '123-456789-01234', holder: '유수연' }
+                    { bank: config.bride.father.bank, number: config.bride.father.number, holder: config.bride.father.name },
+                    { bank: config.bride.mother.bank, number: config.bride.mother.number, holder: config.bride.mother.name }
                 ]);
             });
             
@@ -395,7 +370,7 @@ $config = [
                 if (!calendarElement) return;
                 
                 // Set wedding date (example: October 25, 2023)
-                const weddingDate = new Date(2023, 9, 25); // Month is 0-indexed
+                const weddingDate = new Date(2025, 6, 6); // Month is 0-indexed
                 const currentMonth = weddingDate.getMonth();
                 const currentYear = weddingDate.getFullYear();
                 
@@ -405,7 +380,7 @@ $config = [
                 calendarHeader.innerHTML = `
                     <div class="month-year">${getMonthName(currentMonth)} ${currentYear}</div>
                     <div class="calendar-nav">
-                        <span>sat. pm 1:30</span>
+                        <span>금요일. 오후 1시</span>
                     </div>
                 `;
                 
