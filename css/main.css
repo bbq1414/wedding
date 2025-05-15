@@ -142,6 +142,7 @@ img {
     align-items: center;
     font-size: 1.2rem;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .btn-circle.small {
