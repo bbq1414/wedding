@@ -21,7 +21,8 @@ $config = [
         ]
     ],
     'wedding' => [
-        'date' => '2025년 6월 6일 금요일 오후 1시',
+        'date' => "2025-06-06",
+        'datetime' => '2025년 6월 6일 금요일 오후 1시',
         'venue' => '그린컨벤션 웨딩홀 1F',
         'address' => '서울 도봉구 도봉1동 도봉산길 10',
         'phone' => '02-955-2233'
@@ -76,7 +77,7 @@ $config = [
             </div>
             
             <div class="wedding-date">
-                <p><?php echo $config['wedding']['date']; ?></p>
+                <p><?php echo $config['wedding']['datetime']; ?></p>
                 <p><?php echo $config['wedding']['venue']; ?></p>
             </div>
         </header>
@@ -371,8 +372,8 @@ $config = [
                 const calendarElement = document.getElementById('calendar');
                 if (!calendarElement) return;
                 
-                // Set wedding date (example: October 25, 2023)
-                const weddingDate = new Date(2025, 6, 6); // Month is 0-indexed
+                // Set wedding date
+                const weddingDate = new Date(config.wedding.date); // Month is 0-indexed
                 const currentMonth = weddingDate.getMonth();
                 const currentYear = weddingDate.getFullYear();
                 
