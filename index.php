@@ -235,7 +235,7 @@ $config = [
         </div>
     </div>
     
-    <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7s46ead8h2"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=7s46ead8h2"></script>
     <script>
         const config = <?= json_encode($config, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>;
 
