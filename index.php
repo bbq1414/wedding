@@ -252,6 +252,8 @@ $config = [
     </div>
     
     <script>
+        const config = <?= json_encode($config, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) ?>;
+
         document.addEventListener('DOMContentLoaded', function() {
             // Calendar Generation
             generateCalendar();
