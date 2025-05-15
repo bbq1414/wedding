@@ -5,3 +5,10 @@ Disallow: /node_modules/
 Disallow: /composer.*
 Disallow: /package.json
 Disallow: /README.md
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.webp$
+Disallow: /*.svg$
+Disallow: /images/
