@@ -1,34 +1,30 @@
 <?php
-// Configuration for editable content - you can modify these values directly
 $config = [
     'groom' => [
-        'name' => '이지훈',
-        'father' => '이대영',
-        'mother' => '서지원',
+        'name' => '강태일',
+        'phone' => '010-3652-5609',
+        'father' => ['name' => '강공현', 'phone' => '010-2499-5609'],
+        'mother' => ['name' => '김진주', 'phone' => '010-2267-5609'],
         'accounts' => [
-            ['bank' => '신한은행', 'number' => '110-123-456789', 'holder' => '이대영'],
-            ['bank' => '국민은행', 'number' => '123-12-1234567', 'holder' => '이지훈']
-        ],
-        'phone' => '010-1234-5678',
-        'message' => '010-1234-5678'
+            ['bank' => '우리은행', 'number' => '1002-809-433276', 'holder' => '강공현'],
+            ['bank' => '제일은행', 'number' => '160-20-120948', 'holder' => '김진주']
+        ]
     ],
     'bride' => [
-        'name' => '유수연',
-        'father' => '유창환',
-        'mother' => '박은정',
+        'name' => '오다솔',
+        'phone' => '010-9948-6265',
+        'father' => ['name' => '오학만', 'phone' => '010-6822-7117'],
+        'mother' => ['name' => '이인자', 'phone' => '010-4713-6265'],
         'accounts' => [
-            ['bank' => '우리은행', 'number' => '1002-123-456789', 'holder' => '유창환'],
-            ['bank' => '하나은행', 'number' => '123-456789-01234', 'holder' => '유수연']
-        ],
-        'phone' => '010-9876-5432',
-        'message' => '010-9876-5432'
+            ['bank' => '신한은행', 'number' => '110-002-690637', 'holder' => '오학만'],
+            ['bank' => '광주은행', 'number' => '609-122-202811', 'holder' => '이인자']
+        ]
     ],
     'wedding' => [
-        'date' => '2023년 10월 25일 토요일 오후 1시 30분',
-        'venue' => '더케이호텔 컨벤션홀',
-        'address' => '서울특별시 양재동 엘타워 6층',
-        'phone' => '02-123-4567',
-        'message' => '축하해주셔서 감사합니다.'
+        'date' => '2025년 6월 6일 금요일 오후 1시',
+        'venue' => '그린컨벤션 웨딩홀 1F',
+        'address' => '서울 도봉구 도봉1동 도봉산길 10',
+        'phone' => '02-955-2233'
     ],
     'gallery' => [
         'images' => [
@@ -65,498 +61,7 @@ $config = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: normal;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Header Section */
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .names {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .main-image {
-            margin: 20px 0;
-        }
-
-        .main-image img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        .wedding-title {
-            font-size: 36px;
-            color: #f8a4c1;
-            margin: 20px 0;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .wedding-date {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        /* Poem Section */
-        .poem {
-            text-align: center;
-            margin: 40px 0;
-            padding: 20px 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-
-        .poem h3 {
-            color: #f8a4c1;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .poem p {
-            font-size: 14px;
-            line-height: 1.8;
-            color: #666;
-        }
-
-        /* Contact Section */
-        .contact {
-            margin: 40px 0;
-        }
-
-        .parents {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .parent-group {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
-        .contact-buttons {
-            margin: 30px 0;
-        }
-
-        .contact-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 15px 0;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .label {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-        }
-
-        .btn-circle.small {
-            width: 30px;
-            height: 30px;
-            font-size: 12px;
-        }
-
-        .contact-row:nth-child(1) .btn-circle {
-            background-color: #6ab7ff;
-        }
-
-        .contact-row:nth-child(2) .btn-circle {
-            background-color: #f8a4c1;
-        }
-
-        .family-contacts {
-            margin: 30px 0;
-        }
-
-        .family-row {
-            margin: 20px 0;
-        }
-
-        .side {
-            display: block;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .family-member {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-            padding: 5px 0;
-        }
-
-        .relation {
-            width: 60px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .name {
-            flex-grow: 1;
-            font-size: 14px;
-        }
-
-        .contact-icons {
-            display: flex;
-            gap: 5px;
-        }
-
-        .family-row:nth-child(1) .btn-circle {
-            background-color: #6ab7ff;
-        }
-
-        .family-row:nth-child(2) .btn-circle {
-            background-color: #f8a4c1;
-        }
-
-        /* Calendar Section */
-        .calendar-section {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .calendar-section h3 {
-            color: #f8a4c1;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .calendar {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .calendar th, .calendar td {
-            width: 14.28%;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .calendar th {
-            color: #666;
-        }
-
-        .calendar .today {
-            background-color: #f8a4c1;
-            color: white;
-            border-radius: 50%;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .gallery-section h3 {
-            color: #f8a4c1;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .gallery-item {
-            cursor: pointer;
-            border-radius: 50%;
-            overflow: hidden;
-            aspect-ratio: 1/1;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-caption {
-            font-size: 14px;
-            color: #666;
-            margin-top: 20px;
-        }
-
-        /* Location Section */
-        .location-section {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .location-section h3 {
-            color: #f8a4c1;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .venue-info {
-            margin: 20px 0;
-        }
-
-        .venue-name {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .venue-address {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
-        }
-
-        .venue-phone {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f8a4c1;
-            color: white;
-            text-decoration: none;
-            line-height: 40px;
-            margin-top: 10px;
-        }
-
-        .map {
-            width: 100%;
-            height: 200px;
-            background-color: #f5f5f5;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .transport-options {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-
-        .transport-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 12px;
-            color: #666;
-        }
-
-        .transport-option i {
-            font-size: 20px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        /* Account Section */
-        .account-section {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .account-section h3 {
-            color: #f8a4c1;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .account-section p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .account-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .btn-account {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-account.groom {
-            background-color: #6ab7ff;
-        }
-
-        .btn-account.bride {
-            background-color: #f8a4c1;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-        }
-
-        .modal-content {
-            position: relative;
-            background-color: white;
-            margin: 15% auto;
-            padding: 20px;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-modal-content {
-            width: 90%;
-            max-width: 800px;
-            padding: 10px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #666;
-        }
-
-        #modalTitle {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .account-item {
-            margin: 15px 0;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 10px;
-        }
-
-        .account-bank {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .account-number-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .account-number {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .btn-copy {
-            padding: 5px 10px;
-            background-color: #f5f5f5;
-            border: none;
-            border-radius: 5px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-copy:hover {
-            background-color: #e0e0e0;
-        }
-
-        #galleryModalImage {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 480px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .gallery {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 5px;
-            }
-            
-            .account-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .btn-account {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type = "text/css" href="./css/main.css">
 </head>
 <body>
     <div class="container">
@@ -592,10 +97,10 @@ $config = [
         <section class="contact">
             <div class="parents">
                 <div class="parent-group">
-                    <p><?php echo $config['groom']['father']; ?> · <?php echo $config['groom']['mother']; ?> 의 아들 <?php echo $config['groom']['name']; ?></p>
+                    <p><?php echo $config['groom']['father']['name']; ?> · <?php echo $config['groom']['mother']['name']; ?> 의 아들 <?php echo $config['groom']['name']; ?></p>
                 </div>
                 <div class="parent-group">
-                    <p><?php echo $config['bride']['father']; ?> · <?php echo $config['bride']['mother']; ?> 의 딸 <?php echo $config['bride']['name']; ?></p>
+                    <p><?php echo $config['bride']['father']['name']; ?> · <?php echo $config['bride']['mother']['name']; ?> 의 딸 <?php echo $config['bride']['name']; ?></p>
                 </div>
             </div>
             
@@ -606,7 +111,7 @@ $config = [
                         <a href="tel:<?php echo $config['groom']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-phone"></i>
                         </a>
-                        <a href="sms:<?php echo $config['groom']['message']; ?>" class="btn-circle">
+                        <a href="sms:<?php echo $config['groom']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-comment"></i>
                         </a>
                     </div>
@@ -618,7 +123,7 @@ $config = [
                         <a href="tel:<?php echo $config['bride']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-phone"></i>
                         </a>
-                        <a href="sms:<?php echo $config['bride']['message']; ?>" class="btn-circle">
+                        <a href="sms:<?php echo $config['bride']['phone']; ?>" class="btn-circle">
                             <i class="fas fa-comment"></i>
                         </a>
                     </div>
@@ -630,24 +135,24 @@ $config = [
                     <span class="side">신랑측</span>
                     <div class="family-member">
                         <span class="relation">아버지</span>
-                        <span class="name"><?php echo $config['groom']['father']; ?></span>
+                        <span class="name"><?php echo $config['groom']['father']['name']; ?></span>
                         <div class="contact-icons">
-                            <a href="tel:<?php echo $config['groom']['phone']; ?>" class="btn-circle small">
+                            <a href="tel:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-phone"></i>
                             </a>
-                            <a href="sms:<?php echo $config['groom']['message']; ?>" class="btn-circle small">
+                            <a href="sms:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-comment"></i>
                             </a>
                         </div>
                     </div>
                     <div class="family-member">
                         <span class="relation">어머니</span>
-                        <span class="name"><?php echo $config['groom']['mother']; ?></span>
+                        <span class="name"><?php echo $config['groom']['mother']['name']; ?></span>
                         <div class="contact-icons">
-                            <a href="tel:<?php echo $config['groom']['phone']; ?>" class="btn-circle small">
+                            <a href="tel:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-phone"></i>
                             </a>
-                            <a href="sms:<?php echo $config['groom']['message']; ?>" class="btn-circle small">
+                            <a href="sms:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-comment"></i>
                             </a>
                         </div>
@@ -658,24 +163,24 @@ $config = [
                     <span class="side">신부측</span>
                     <div class="family-member">
                         <span class="relation">아버지</span>
-                        <span class="name"><?php echo $config['bride']['father']; ?></span>
+                        <span class="name"><?php echo $config['bride']['father']['name']; ?></span>
                         <div class="contact-icons">
-                            <a href="tel:<?php echo $config['bride']['phone']; ?>" class="btn-circle small">
+                            <a href="tel:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-phone"></i>
                             </a>
-                            <a href="sms:<?php echo $config['bride']['message']; ?>" class="btn-circle small">
+                            <a href="sms:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-comment"></i>
                             </a>
                         </div>
                     </div>
                     <div class="family-member">
                         <span class="relation">어머니</span>
-                        <span class="name"><?php echo $config['bride']['mother']; ?></span>
+                        <span class="name"><?php echo $config['bride']['mother']['name']; ?></span>
                         <div class="contact-icons">
-                            <a href="tel:<?php echo $config['bride']['phone']; ?>" class="btn-circle small">
+                            <a href="tel:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-phone"></i>
                             </a>
-                            <a href="sms:<?php echo $config['bride']['message']; ?>" class="btn-circle small">
+                            <a href="sms:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle small">
                                 <i class="fas fa-comment"></i>
                             </a>
                         </div>
@@ -720,7 +225,7 @@ $config = [
                 <!-- Naver Map will be inserted here -->
             </div>
             
-            <div class="transport-options">
+            <!-- <div class="transport-options">
                 <div class="transport-option">
                     <i class="fas fa-subway"></i>
                     <span>지하철</span>
@@ -737,7 +242,7 @@ $config = [
                     <i class="fas fa-map-marker-alt"></i>
                     <span>카카오맵</span>
                 </div>
-            </div>
+            </div> -->
         </section>
         
         <!-- Account Section -->
