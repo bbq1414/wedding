@@ -192,6 +192,9 @@ img {
 .calendar-section {
     margin: 40px 0;
     text-align: center;
+    border: 2px solid #f8a4c1;
+    border-radius: 10px;
+    padding: 1rem;
 }
 
 .calendar-section h3 {
@@ -216,6 +219,37 @@ img {
 .calendar th {
     color: #666;
 }
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+}
+  
+.calendar-month {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #f87189;
+}
+
+.calendar-month .month-number {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.calendar-time {
+    color: #333;
+    font-size: 1.1rem;
+}  
 
 .calendar .today {
     background-color: #f8a4c1;
