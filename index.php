@@ -67,7 +67,7 @@ $config = [
 <body>
     <div class="container">
         <!-- Header Section -->
-        <section class="header">
+        <header class="header">
             <div class="main-image">
                 <img src="./images/main.webp" alt="Wedding Photo">
             </div>
@@ -80,7 +80,7 @@ $config = [
                 <p><?php echo $config['wedding']['datetime']; ?></p>
                 <p><?php echo $config['wedding']['venue']; ?></p>
             </div>
-        </section>
+        </header>
         
         <!-- Poem Section -->
         <section class="poem">
