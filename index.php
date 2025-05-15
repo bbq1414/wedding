@@ -87,7 +87,7 @@ $config = [
         
         <!-- Poem Section -->
         <section class="poem">
-            <h3>"하나 되는 날"</h3>
+            <h3>" 이제 서로, 평생 함께 "</h3>
             <p><?php echo $config['poem']; ?></p>
         </section>
         
@@ -180,7 +180,7 @@ $config = [
         
         <!-- Gallery Section -->
         <section class="gallery-section">
-            <h3>하나되는 날</h3>
+            <h3>" 하나되는 날 "</h3>
             <div class="gallery">
                 <?php foreach ($config['gallery']['images'] as $index => $image): ?>
                 <div class="gallery-item" data-index="<?php echo $index; ?>">
@@ -193,7 +193,7 @@ $config = [
         
         <!-- Location Section -->
         <section class="location-section">
-            <h3>오시는 길</h3>
+            <h3>" 오시는 길 "</h3>
             <div class="venue-info">
                 <p class="venue-name"><?php echo $config['wedding']['venue']; ?></p>
                 <p class="venue-address"><?php echo $config['wedding']['address']; ?></p>
@@ -209,7 +209,7 @@ $config = [
         
         <!-- Account Section -->
         <section class="account-section">
-            <h3>마음 전하실 곳</h3>
+            <h3>" 마음 전하실 곳 "</h3>
             <p>축하의 마음을 전달해 주시면 감사하겠습니다.</p>
             
             <div class="account-buttons">
