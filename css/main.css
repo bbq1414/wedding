@@ -142,50 +142,65 @@ img {
 }
 
 .family-contacts {
-    margin: 30px 0;
-}
-
-.family-row {
-    margin: 20px 0;
-}
-
-.side {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.family-member {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    padding: 5px 0;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-
+.family-row {
+    width: 48%;
+}
+.side {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.family-row:nth-child(1) .side {
+    color: #81d3d0;
+}
+.family-row:nth-child(2) .side {
+    color: #eea6c9;
+}
+.family-member {
+    margin-bottom: 2rem;
+    text-align: center;
+}
 .relation {
-    width: 60px;
-    font-size: 14px;
-    color: #666;
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
 }
-
 .name {
-    flex-grow: 1;
-    font-size: 14px;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.3rem 0 0.8rem;
 }
-
 .contact-icons {
     display: flex;
-    gap: 5px;
+    justify-content: center;
+    gap: 1rem;
 }
-
-.family-row:nth-child(1) .btn-circle {
-    background-color: #6ab7ff;
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.3rem;
 }
-
-.family-row:nth-child(2) .btn-circle {
-    background-color: #f8a4c1;
+.family-row:nth-child(1) .btn-circle:nth-child(1) {
+    background-color: #b4dad9;
+}
+.family-row:nth-child(2) .btn-circle:nth-child(1) {
+    background-color: #f4c4d7;
+}
+.btn-circle:nth-child(2) {
+    background-color: #ccc;
 }
 
 /* Calendar Section */

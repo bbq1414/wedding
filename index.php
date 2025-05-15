@@ -22,7 +22,7 @@ $config = [
     ],
     'wedding' => [
         'date' => "2025-06-06",
-        'date_eng' => "fri. pm 1",
+        'date_eng' => "fri. pm 1:00",
         'datetime' => '2025년 6월 6일 금요일 오후 1시',
         'venue' => '그린컨벤션 웨딩홀 1F',
         'address' => '서울 도봉구 도봉1동 도봉산길 10',
@@ -127,61 +127,45 @@ $config = [
             </div>
             
             <div class="family-contacts">
-                <div class="family-row">
-                    <span class="side">신랑측</span>
-                    <div class="family-member">
-                        <span class="relation">아버지</span>
-                        <span class="name"><?php echo $config['groom']['father']['name']; ?></span>
-                        <div class="contact-icons">
-                            <a href="tel:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                            <a href="sms:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-comment"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="family-member">
-                        <span class="relation">어머니</span>
-                        <span class="name"><?php echo $config['groom']['mother']['name']; ?></span>
-                        <div class="contact-icons">
-                            <a href="tel:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                            <a href="sms:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-comment"></i>
-                            </a>
-                        </div>
-                    </div>
+              <div class="family-row">
+                <span class="side">신랑 측 혼주</span>
+                <div class="family-member">
+                  <span class="relation">아버지</span>
+                  <span class="name"><?php echo $config['groom']['father']['name']; ?></span>
+                  <div class="contact-icons">
+                    <a href="tel:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle"><i class="fas fa-phone"></i></a>
+                    <a href="sms:<?php echo $config['groom']['father']['phone']; ?>" class="btn-circle"><i class="fas fa-comment"></i></a>
+                  </div>
                 </div>
-                
-                <div class="family-row">
-                    <span class="side">신부측</span>
-                    <div class="family-member">
-                        <span class="relation">아버지</span>
-                        <span class="name"><?php echo $config['bride']['father']['name']; ?></span>
-                        <div class="contact-icons">
-                            <a href="tel:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                            <a href="sms:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-comment"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="family-member">
-                        <span class="relation">어머니</span>
-                        <span class="name"><?php echo $config['bride']['mother']['name']; ?></span>
-                        <div class="contact-icons">
-                            <a href="tel:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-phone"></i>
-                            </a>
-                            <a href="sms:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle small">
-                                <i class="fas fa-comment"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="family-member">
+                  <span class="relation">어머니</span>
+                  <span class="name"><?php echo $config['groom']['mother']['name']; ?></span>
+                  <div class="contact-icons">
+                    <a href="tel:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle"><i class="fas fa-phone"></i></a>
+                    <a href="sms:<?php echo $config['groom']['mother']['phone']; ?>" class="btn-circle"><i class="fas fa-comment"></i></a>
+                  </div>
                 </div>
+              </div>
+
+              <div class="family-row">
+                <span class="side">신부 측 혼주</span>
+                <div class="family-member">
+                  <span class="relation">아버지</span>
+                  <span class="name"><?php echo $config['bride']['father']['name']; ?></span>
+                  <div class="contact-icons">
+                    <a href="tel:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle"><i class="fas fa-phone"></i></a>
+                    <a href="sms:<?php echo $config['bride']['father']['phone']; ?>" class="btn-circle"><i class="fas fa-comment"></i></a>
+                  </div>
+                </div>
+                <div class="family-member">
+                  <span class="relation">어머니</span>
+                  <span class="name"><?php echo $config['bride']['mother']['name']; ?></span>
+                  <div class="contact-icons">
+                    <a href="tel:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle"><i class="fas fa-phone"></i></a>
+                    <a href="sms:<?php echo $config['bride']['mother']['phone']; ?>" class="btn-circle"><i class="fas fa-comment"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
         </section>
         
