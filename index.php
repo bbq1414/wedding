@@ -44,15 +44,15 @@ $config = [
             'images/gallery12.jpg',
         ]
     ],
-    'poem' => '사랑은 기다림의 미학이며
-        두 사람이 함께 걸어가는 여정입니다
-        함께 손을 잡고 걸어갈 수 있어
-        행복합니다.
+    'poem' => '사랑은 기다림의 미학이며<br>
+        두 사람이 함께 걸어가는 여정입니다<br>
+        함께 손을 잡고 걸어갈 수 있어<br>
+        행복합니다.<br><br>
         
-        저희 두 사람이
-        사랑과 믿음으로 만나
-        하나의 가정을 이루게 되었습니다
-        귀한 걸음 하시어
+        저희 두 사람이<br>
+        사랑과 믿음으로 만나<br>
+        하나의 가정을 이루게 되었습니다<br>
+        귀한 걸음 하시어<br>
         축복해 주시면 감사하겠습니다.'
 ];
 ?>
@@ -86,7 +86,7 @@ $config = [
         <!-- Poem Section -->
         <section class="poem">
             <h3>"하나 되는 날"</h3>
-            <div><?php echo $config['poem']; ?></div>
+            <p><?php echo $config['poem']; ?></p>
         </section>
         
         <!-- Contact Section -->
