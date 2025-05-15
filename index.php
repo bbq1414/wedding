@@ -95,10 +95,10 @@ $config = [
         <section class="contact">
             <div class="parents">
                 <div class="parent-group">
-                    <p><?php echo $config['groom']['father']['name']; ?> · <?php echo $config['groom']['mother']['name']; ?> 의 아들 <?php echo $config['groom']['name']; ?></p>
+                    <p><?php echo $config['groom']['father']['name']; ?> · <?php echo $config['groom']['mother']['name']; ?> 의 아들 <b><?php echo $config['groom']['name']; ?></b></p>
                 </div>
                 <div class="parent-group">
-                    <p><?php echo $config['bride']['father']['name']; ?> · <?php echo $config['bride']['mother']['name']; ?> 의 딸 <?php echo $config['bride']['name']; ?></p>
+                    <p><?php echo $config['bride']['father']['name']; ?> · <?php echo $config['bride']['mother']['name']; ?> 의 딸 <b><?php echo $config['bride']['name']; ?></b></p>
                 </div>
             </div>
             
