@@ -58,6 +58,11 @@ $config = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mobile-wedding.o-r.kr/">
+    <meta property="og:title" content="강태일 ♥ 오다솔 모바일 청첩장">
+    <meta property="og:description" content="2025년 6월 6일, 그린컨벤션 웨딩홀">
+    <meta property="og:image" content="https://mobile-wedding.o-r.kr/images/main.webp">
     <title>Wedding Invitation</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
