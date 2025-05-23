@@ -358,7 +358,7 @@
                 const weddingDate = new Date(config.wedding.date); // Month is 0-indexed
                 const currentMonth = weddingDate.getMonth();
                 const currentYear = weddingDate.getFullYear();
-                const monthNameEn = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(config.wedding.date);
+                const monthNameEn = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(weddingDate);
                 
                 // Create calendar header
                 const calendarHeader = document.createElement('div');
