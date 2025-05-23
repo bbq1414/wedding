@@ -130,7 +130,7 @@
         <!-- Gallery Section -->
         <section class="gallery-section">
             <h3>" 하나되는 날 "</h3>
-            <div class="gallery">
+            <div class="gallery" id="gallery">
                 <!-- Gallery Images will be inserted here -->
             </div>
             <p class="gallery-caption">소중한 순간들을 함께해주셔서 감사합니다</p>
@@ -190,7 +190,7 @@
             document.getElementById('header-section-config-wedding-venue').textContent = config.wedding.venue;
 
             // Poem Section
-            document.getElementById('poem-sectionconfig-poem').innerHTML = config.poem;
+            document.getElementById('poem-section-config-poem').innerHTML = config.poem;
 
             // Contact Section
             document.getElementById('contact-section-config-groom-names').innerHTML = `${config.groom.father.name} · ${config.groom.mother.name} 의 장남 <b>${config.groom.name}</b>`;
@@ -358,14 +358,15 @@
                 const weddingDate = new Date(config.wedding.date); // Month is 0-indexed
                 const currentMonth = weddingDate.getMonth();
                 const currentYear = weddingDate.getFullYear();
+                const monthNameEn = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(config.wedding.date);
                 
                 // Create calendar header
                 const calendarHeader = document.createElement('div');
                 calendarHeader.className = 'calendar-header';
                 calendarHeader.innerHTML = `
                     <div class="calendar-month">
-                      <span class="month-number">6</span>
-                      <span class="month-name">June</span>
+                      <span class="month-number">${currentMonth + 1}</span>
+                      <span class="month-name">${monthNameEn}</span>
                     </div>
                     <div class="calendar-time">
                       <span>${config.wedding.date_eng}</span>
